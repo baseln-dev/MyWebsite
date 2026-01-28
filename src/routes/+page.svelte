@@ -7,36 +7,34 @@
   
   const projects = [
     {
-      title: "Movie Recommendation Engine", 
-      description: "ML-powered recommendation system using collaborative filtering algorithms. Achieved 85% accuracy with user preference prediction using Python and TensorFlow.",
-      tech: ["Python", "TensorFlow", "Pandas", "Scikit-learn"],
+      title: "Movie Recommendation Website", 
+      description: "A website that allows users to keep track of movies they've watched and receive personalized movie recommendations based on their viewing history.",  
+      tech: ["SveltKit", "TypeScript", "TMDB API", "PostgreSQL"],
       details: {
-        github: "https://github.com/yourusername/movie-recommender",
-        demo: "https://movie-recommender-demo.com",
-        features: ["Collaborative Filtering", "Content-Based Filtering", "Hybrid Approach", "Real-time Recommendations"],
-        challenges: "Handling sparse data matrices and cold start problems for new users"
+        github: "https://github.com/baseln-dev/MovieRec",
+        demo: "https://movierec.rreed.dev",
+        features: ["TMDB API integration", "Content-based filtering", "Database indexing", "User authentication"],
+        challenges: "optimizing recommendation algorithms for performance and accuracy"
       }
     },
     {
       title: "Spotify Playlist Sorter",
       description: "A sorting tool which connects to a user's Spotify account and allows them to create playlists by splitting an existing playlist into genres.",
-      tech: ["Svelte", "TailwindCSS","Spotify API"],
+      tech: ["Svelte", "TailwindCSS", "TypeScript", "Spotify API"],
       details: {
-        github: "https://github.com/yourusername/spotify-sorter",
-        demo: "https://spotify-sorter-demo.com", 
+        github: "https://playlist-sorter.rreed.dev",
+        demo: "https://playlist-sorter.rreed.dev", 
         features: ["OAuth Integration", "Genre Classification", "Automatic Playlist Creation", "Bulk Track Management"],
         challenges: "Working with Spotify's API rate limits and implementing reliable genre detection"
       }
     },
     {
-      title: "Campus Navigation Mobile App",
-      description: "Cross-platform mobile app for campus navigation with offline maps, real-time building information, and accessibility features.",
-      tech: ["Flutter", "Dart", "Firebase", "Google Maps API"],
+      title: "Task Organisation App",
+      description: "A mobile application designed to help users organize and manage their tasks efficiently with features like categorization, deadlines, and reminders.",
+      tech: [".NET MAUI", "C#", "SQLite"],
       details: {
-        github: "https://github.com/yourusername/campus-nav",
-        demo: "https://campus-nav-demo.com",
-        features: ["Offline Maps", "Indoor Navigation", "Accessibility Routes", "Real-time Updates"],
-        challenges: "Implementing accurate indoor positioning and maintaining offline map synchronization"
+        features: ["Task Categorization", "Deadline Management", "Reminders", "Synchronization"],
+        challenges: "managing data synchronization across devices and implementing a user-friendly interface",
       }
     }
   ];
@@ -192,10 +190,26 @@
 
   <!-- Project Details Modal Overlay -->
   {#if selectedProject}
-    <div class="project-details-overlay" on:click={closeProjectDetails}>
-      <section id="project-details" class="project-details-modal" on:click|stopPropagation>
+    <div 
+      class="project-details-overlay" 
+      on:click={closeProjectDetails}
+      on:keydown={(e) => e.key === 'Escape' && closeProjectDetails()}
+      role="button"
+      tabindex="0"
+      aria-label="Close modal"
+    >
+      <div
+        id="project-details" 
+        class="project-details-modal" 
+        on:click|stopPropagation
+        on:keydown|stopPropagation
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        tabindex="-1"
+      >
       <div class="details-header">
-        <h2>{selectedProject.title}</h2>
+        <h2 id="modal-title">{selectedProject.title}</h2>
         <button class="close-btn" on:click={closeProjectDetails}>×</button>
       </div>
       
@@ -244,7 +258,7 @@
           </div>
         </div>
       </div>
-      </section>
+      </div>
     </div>
   {/if}
 
@@ -254,15 +268,15 @@
       <div class="skills-grid">
         <div class="skill-category">
           <h3>Programming Languages</h3>
-          <p>JavaScript, Python, Java, C# and C++</p>
+          <p>JavaScript, Typescript, Java, C# and C++</p>
         </div>
         <div class="skill-category">
           <h3>Web Development</h3>
-          <p>React, Node.js, Svelte</p>
+          <p>React, Node.js, SvelteKit, TailwindCSS, Bootstrap</p>
         </div>
         <div class="skill-category">
           <h3>Tools & Technologies</h3>
-          <p>Git, AWS, Firebase</p>
+          <p>Git, PostgreSQL</p>
         </div>
       </div>
     </div>
@@ -272,13 +286,13 @@
     <div class="section-content">
       <h2>Let's Connect</h2>
       <p>
-        Interested in collaborating on a project or discussing opportunities? 
+        Interested in collaborating on a project or discussing opportunities? <br/>
         I'm always open to connecting with fellow developers and potential employers.
       </p>
       <div class="contact-links">
-        <a href="mailto:your.email@example.com">Email</a>
-        <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
-        <a href="https://github.com/yourusername">GitHub</a>
+        <a href="mailto:rufus_reed@hotmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/rufus-reed-b957403a4/">LinkedIn</a>
+        <a href="https://github.com/baseln-dev">GitHub</a>
       </div>
     </div>
   </section>
