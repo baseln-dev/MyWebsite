@@ -185,6 +185,7 @@
         </div>
         <button class="next-btn" on:click={nextSlide}>❯</button>
       </div>
+      </div>
     </div>
   </section>
 
