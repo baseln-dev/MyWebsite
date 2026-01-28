@@ -5,9 +5,12 @@
 	let { children } = $props();
 </script>
 
+<script context="module">
+	export const prerender = true;
+</script>
+
 <svelte:head>
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
 {@render children?.()}
-export const prerender = true;
