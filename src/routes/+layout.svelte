@@ -9,4 +9,5 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-{@render children?.()}
+<!-- svelte-ignore svelte_component_deprecated -->
+<svelte:component this={children} />
