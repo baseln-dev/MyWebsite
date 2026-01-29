@@ -116,7 +116,7 @@
   <section class="page-section hero-section">
     <header>
       <h1>Rufus Reed</h1>
-      <p class="tagline">Computer Science Student | Full-Stack Developer | Problem Solver</p>
+      <p class="tagline">Computer Science Student | Aspiring Software Engineer</p>
     </header>
   </section>
 
@@ -124,13 +124,7 @@
     <div class="section-content">
       <h2>About Me</h2>
       <p>
-        I'm a passionate Computer Science student with a love for building innovative software solutions. 
-        Currently pursuing my degree while working on projects that span web development, machine learning, 
-        and mobile applications.
-      </p>
-      <p>
-        When I'm not coding, you'll find me contributing to open-source projects, participating in hackathons, 
-        or exploring the latest trends in technology.
+        Computer Science student working on practical software projects alongside my degree. Interests include full-stack development, game development, and mobile applications, with a focus on clear design and strong technical fundamentals.
       </p>
     </div>
   </section>
