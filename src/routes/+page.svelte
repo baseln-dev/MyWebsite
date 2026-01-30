@@ -107,6 +107,9 @@
   });
 </script>
 
+<head>
+    <meta name="google-site-verification" content="1ePYUglVvtsGZf1VOsWaAjDMmrrR0xxVKwQ_nskB4iU" />
+</head>
 <svelte:head>
   <title>Your Name - CS Student Portfolio</title>
   <meta name="google-site-verification" content="1ePYUglVvtsGZf1VOsWaAjDMmrrR0xxVKwQ_nskB4iU" />
