@@ -109,7 +109,7 @@
 
 <svelte:head>
   <title>Your Name - CS Student Portfolio</title>
-  <meta name="description" content="Computer Science student portfolio showcasing programming projects and technical skills" />
+  <meta name="google-site-verification" content="1ePYUglVvtsGZf1VOsWaAjDMmrrR0xxVKwQ_nskB4iU" />
 </svelte:head>
 
 <div class="container">
